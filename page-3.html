@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe Tickets</title>
+    <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome5/css/all.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="css/subscriptions.css"> -->
+    
+    <style>
+
+        #blue-div-nav{
+            height: 60px;
+        }
+
+        .hover-effect:hover {
+            background-color: #E7EEF9;
+        }
+        .user-sell-white-nav .nav-link:hover {
+            background-color: #A5A5A5;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .custom-w {
+                /* width: 100%; */
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .custom-w {
+                /* width: 50%; */
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .custom-mt {
+                /* margin-top:60px; */
+                /* margin-bottom: -20px; */
+            }
+        }
+
+        #event-reviews.container-fluid {
+            padding-right: 30px;
+            padding-left: 30px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row white-div">
+            <div class="col-12 hide-and-show" id="white-div-nav">
+                <nav class="navbar navbar-expand-md row">
+    
+                    <!-- first column of blue nav -->
+                    <div class="col-6 col-sm-8 col-lg-10 col-xl-9">
+                        <div class="row">
+                            <div class="col-12 col-md-3 col-lg-2 white-div-logo">
+                                <a href="#" class="">
+                                    <img src="images/tek-tickets.png" alt="logo" width="100" height="100">
+                                </a>
+                            </div>
+    
+                            <!-- hide and show this header on >=medium devices -->
+                            <div class="col-md-9 col-lg-5 white-div-form">
+                                <form class="" action="">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input class="form-control search" type="text" name=""
+                                                id="white-navbar-input-field"
+                                                placeholder="Find millions of live experiences">
+                                            <i class="fas fa-search input-search-icon"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <div class="col-lg-5">
+                                <ul class="navbar-nav large-screen-menulinks">
+                                    <li class="nav-item user-sell-white-nav mr-3">
+                                        <a class="nav-link" href="#">Concert</a>
+                                    </li>
+                                    <li class="nav-item user-sell-white-nav mr-3">
+                                        <a class="nav-link" href="#">Sports</a>
+                                    </li>
+                                    <li class="nav-item arts user-sell-white-nav mr-3">
+                                        <a class="nav-link" href="#">Arts</a>
+                                    </li>
+                                    <li class="nav-item family user-sell-white-nav mr-3">
+                                        <a class="nav-link" href="#">Family</a>
+                                    </li>
+                                    <li class="nav-item dropdown user-sell-white-nav">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">More</a>
+                                        <div class="dropdown-menu dropdown-menu-left" id="more-dropdown-div">
+                                            <a class="dropdown-item arts-dropdown" href="#">Arts & Theater</a>
+                                            <a class="dropdown-item family-dropdown" href="#">Family</a>
+                                            <a class="dropdown-item" href="#">VIP</a>
+                                            <a class="dropdown-item" href="#">Deals</a>
+                                            <a class="dropdown-item" href="#">Entertainment Guides</a>
+                                            <!-- <a class="dropdown-item" href="#">For You</a> -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- hide and show this header on >=medium devices -->
+    
+                        </div>
+                    </div>
+    
+    
+                    <!-- second column of white nav -->
+                    <div class="col-6 col-sm-4 col-lg-2 col-xl-2 mb-3 navbar-icons">
+                        <div class="row">
+                            <div class="col-3 search-icon icon-links">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="col-3 col-md-2 col-lg-4 col-xl-3 dropdown user-sell-white-nav user-icon icon-links">
+                                <div class="" data-toggle="dropdown">
+                                    <i class="far fa-user-circle"></i>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">My Account</a>
+                                    <a class="dropdown-item" href="#">My Tickets</a>
+                                    <a class="dropdown-item" href="#">My Listings</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Sell</a>
+                                    <a class="dropdown-item" href="#">Sign Out</a>
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-3 col-lg-4 col-xl-3 user-sell-white-nav icon-links sell">
+                                <span>Sell</span>
+                            </div>
+                            <div class="col-md-3 col-lg-4 col-xl-3 user-sell-white-nav icon-links help">
+                                Help
+                            </div>
+                            <div class="col-3 col-md-3 hamburger-icon" type="button" data-toggle="collapse"
+                                data-target="#menu-items">
+                                <div class="toggler-icon"></div>
+                                <div class="toggler-icon"></div>
+                                <div class="toggler-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- white nav ends here -->
+    
+        <!-- blue navbar -->
+        <div class="row blue-div">
+            <div class="col-12" id="blue-div-nav">
+                <nav class="navbar navbar-expand-md row">
+    
+                    <!-- first column of blue nav-->
+                    <div class="col-6 col-sm-8 col-lg-10 col-xl-9 mb-3">
+                        <div class="row">
+                            <div class="col-12 col-md-3 col-lg-2 blue-div-logo" id="logo">
+                                <a href="#">
+                                    <img src="images/tek-tickets.png" alt="logo" width="100" height="100">
+                                </a>
+                            </div>
+    
+                            <!-- hide and show this header on >=medium devices -->
+                            <div class="col-md-9 col-lg-5 blue-div-form">
+                                <form class="" action="">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input class="form-control search" type="text" name=""
+                                                id="blue-navbar-input-field"
+                                                placeholder="Find millions of live experiences">
+                                            <i class="fas fa-search input-search-icon"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <div class="col-lg-5">
+                                <ul class="navbar-nav large-screen-menulinks">
+                                    <li class="nav-item user-sell-blue-nav mr-3">
+                                        <a class="nav-link" href="#">Concert</a>
+                                    </li>
+                                    <li class="nav-item user-sell-blue-nav mr-3">
+                                        <a class="nav-link" href="#">Sports</a>
+                                    </li>
+                                    <li class="nav-item arts user-sell-blue-nav mr-3">
+                                        <a class="nav-link" href="#">Arts</a>
+                                    </li>
+                                    <li class="nav-item family user-sell-blue-nav mr-3">
+                                        <a class="nav-link" href="#">Family</a>
+                                    </li>
+                                    <li class="nav-item dropdown user-sell-blue-nav">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">More</a>
+                                        <div class="dropdown-menu dropdown-menu-left" id="more-dropdown-div">
+                                            <a class="dropdown-item arts-dropdown" href="#">Arts & Theater</a>
+                                            <a class="dropdown-item family-dropdown" href="#">Family</a>
+                                            <a class="dropdown-item" href="#">VIP</a>
+                                            <a class="dropdown-item" href="#">Deals</a>
+                                            <a class="dropdown-item" href="#">Entertainment Guides</a>
+                                            <!-- <a class="dropdown-item" href="#">For You</a> -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- hide and show this header on >=medium devices -->
+                    </div>
+    
+                    <!-- second column of blue nav-->
+                    <div class="col-6 col-sm-4 col-lg-2 col-xl-2 mb-3 navbar-icons">
+                        <div class="row">
+                            <div class="col-3 search-icon icon-links">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="col-3 col-md-2 col-lg-4 col-xl-3 dropdown user-sell-blue-nav user-icon icon-links">
+                                <div class="" data-toggle="dropdown">
+                                    <i class="far fa-user-circle"></i>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">My Account</a>
+                                    <a class="dropdown-item" href="#">My Tickets</a>
+                                    <a class="dropdown-item" href="#">My Listings</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Sell</a>
+                                    <a class="dropdown-item" href="#">Sign Out</a>
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-3 col-lg-4 col-xl-3 user-sell-blue-nav sell icon-links">
+                                <span>Sell</span>
+                            </div>
+                            <div class="col-md-3 col-lg-4 col-xl-3 user-sell-blue-nav help icon-links">
+                                Help
+                            </div>
+                            <div class="col-3 col-md-3 hamburger-icon" type="button" data-toggle="collapse"
+                                data-target="#menu-items">
+                                <!-- <div class="row"> -->
+                                <div class="toggler-icon"></div>
+                                <div class="toggler-icon"></div>
+                                <div class="toggler-icon"></div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    
+            <div id="event-reviews" class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-7 col-md-7 custom-mt col-lg-8 col-xl-9">
+                        <div class="row">
+                            <div class="col-12 font-14">
+                                Home / Concert Tickets / Rock / 
+                                <span class="expand-at-medium">
+                                    John Doe Tickets
+                                </span>
+                                <span class="star-span">
+                                    <i class="fa fa-star"></i>
+                                    4.5
+                                </span>
+                            </div>
+                            <div class="col-12 font-14 artist-tickets hide-at-medium">
+                                John Doe Tickets
+                            </div>
+                            <div class="col-12 hide-at-xsm show-at-sm">
+                                John Doe
+                                <span class="">Tickets</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 artist-name-page3">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="" src="https://via.placeholder.com/300x200" alt="" width="100%">
+                            </div>
+                            <div class="col-12 hide-from-small">
+                                John Doe
+                                <span class="">Tickets</span>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div class="row">
+                            <a class="active col-5" href="#">Events (33)</a>
+                            <a class="col-5" href="#">Reviews (42)</a>
+                            <a class="col-2" href="#">Bio</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- header section ends -->
+
+    <main>
+        <section class="section-for-advert">
+            <div class="row advert-section">
+                <div class="col-lg-8 col-xl-6 mx-auto" id="advert-img-div">
+                    <img src="https://tpc.googlesyndication.com/simgad/3861415721932990274" alt="" width="728" height="90">
+                </div>
+            </div>
+        </section>
+
+        <section class="large-screen-padding main-content-section">
+            <div class="container-fluid my-5">
+                <div class="row mx-auto">
+                    <div class="col-12 col-xl-8">
+                        <div class="row">
+                            <div class="col-3 list-calendar expand-at-large">
+                                <a href="#" class="btn">
+                                    <i class="fa fa-list"></i>
+                                </a>
+                                <a href="#" class="btn color-theme event-info ml-n2">
+                                    <i class="fa fa-calendar"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="col-lg-4 col-sm-5 col-12">
+                                <form action="">
+                                    <div class="form-row">
+                                        <div class="col-12 mb-2 mr-2">
+                                            <select class="form-control concert-event-forms">
+                                                <option hidden>Select Your Dates</option>
+                                                <option>All Dates</option>
+                                                <option>This Weekend</option>
+                                                <option>Date Range</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-5 col-sm-2 align-text-left mt-2 expand-at-small">
+                                <span class="color-theme ml-n3 h5 mt-2">Reset</span>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-8">
+                                <input type="checkbox"><span class="btn mt-n4"> Events Only</span>
+                            </div>
+                            <div class="col-4 expand-at-medium">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle w-100 text-right " type="button" id="dropdown"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Sort By: Date
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                                        <a class="dropdown-item" href="#">Date</a>
+                                        <a class="dropdown-item" href="#">Distance</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="h5">All Events</h4>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 col-sm-6 col-md-3 angle-down line-h-10">
+                                <div class="row event-dates">
+                                    <div class="col-md-12 col-4">
+                                        <p class="color-theme">JUN 24</p>
+                                    </div>
+                                    <div class="col-md-12 col-8">
+                                        <p class="grey-theme font-14">Wed <span class="font-5"> &#9899; </span> 8:00pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 line-h-10">
+                                <div class="row">
+                                    <div class="col-sm-9 col-9 col-lg-12">
+                                        <p class="font-w">Lorem ipsum dolor sit</p>
+                                        <p class="grey-theme font-14">Lorem ipsum dolor sit</p>
+                                        <div class="col color-theme my-2 align-text-left ml-n3">
+                                            ADD-ON
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-3 d-md-none text-right">
+                                        <i class="fa fa-ellipsis-v fa-2x mt-n5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 text-center expand-at-medium">
+                                <button class="btn mt-2 button-color white event-info">See Tickets</button>
+                            </div>
+                        </div>
+            
+                        <div class="row mt-4 pb-3">
+                            <div class="col text-center">
+                                <a href="#" class="btn border border-primary color-theme event-info custom-w">Load More</a>
+                            </div>
+                        </div>
+            
+            
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <p class="font-w font-16">From the Artiste</p>
+                        <div class="row">
+                            <div class="col-lg-6 col-4">
+                                <img class="" src="https://via.placeholder.com/250x150" alt="" width="100%">
+                            </div>
+                            <div class="col-lg-6 col-8">
+                                <span class="color-theme">Get Exclusive Perks</span><br>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6 col-4">
+                                <img class="" src="https://via.placeholder.com/250x150" alt="" width="100%">
+                            </div>
+                            <div class="col-lg-6 col-8">
+                                <span class="color-theme">Event Information</span><br>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                        <div class="row mt-4 expand-at-xl">
+                            <div class="col">
+                                <img class="" src="https://via.placeholder.com/300x250" alt="">
+                            </div>
+                        </div>
+                        <div class="row mt-4 expand-at-xl">
+                            <div class="col">
+                                <img class="" src="https://via.placeholder.com/300x500" alt="">
+                            </div>
+                        </div>
+                        <div class="row mt-4 expand-at-xl">
+                            <div class="col">
+                                <img class="" src="https://via.placeholder.com/300x250" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid mt-5">
+                <div class="row mx-auto">
+                    <div class="col">
+                        <h4>Fans Also Viewed</h4>
+                    </div>
+                </div>
+            
+                <div class="row mx-auto fans-views-images">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 hide-at-xsm">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-4 expand-at-medium">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3 expand-at-large">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3 expand-at-large">
+                        <div class="row">
+                            <div class="col-lg-3 ">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                            <div class="col-lg-3">
+                                <img class="" src="https://via.placeholder.com/300x150" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    
+   
+
+    <div class="container-fluid">
+        <footer class="footer py-4">
+            <div class="row">
+                <div class="col-12 ">
+                    By continuing past this page, you agree to our <span class="terms-policy"> Terms of Use. <br>
+    
+                        Privacy Policy</span> | © 1999-2020 Ticketmaster. All rights reserved. <br>
+    
+                    <span class="terms-policy">Do Not Sell My Information</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/jquery-3.4.1.min.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
